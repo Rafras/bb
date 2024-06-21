@@ -1,0 +1,181 @@
+apply plugin: 'com.android.library'
+**APPLY_PLUGINS**
+
+gradle.projectsEvaluated {
+	apply from: 'GooglePropertyFix.androidlib/validate_dependencies.gradle'
+}
+
+Set<String> jarPickFirsts = [
+	'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.properties',
+	'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml',
+	'META-INF/maven/com.google.protobuf/protobuf-lite/pom.properties',
+	'META-INF/maven/com.google.protobuf/protobuf-lite/pom.xml',
+	'META-INF/maven/com.nineoldandroids/library/pom.properties',
+	'META-INF/maven/com.nineoldandroids/library/pom.xml',
+	'META-INF/services/com.fasterxml.jackson.core.ObjectCodec'
+]
+
+Set<String> jarExcludes = [
+	'assets/vg_close.png',
+	'assets/vg_cta.png',
+	'assets/vg_cta_disabled.png',
+	'assets/vg_mute_off.png',
+	'assets/vg_mute_on.png',
+	'assets/vg_privacy.png',
+	'assets/vg_timer.png',
+	'META-INF/license.txt',
+	'META-INF/notice.txt'
+]
+
+android {
+	ndkPath "**NDKPATH**"
+	
+	compileSdkVersion **APIVERSION**
+	buildToolsVersion '**BUILDTOOLS**'
+	
+	defaultConfig {
+		minSdkVersion **MINSDKVERSION**
+		targetSdkVersion **TARGETSDKVERSION**
+		versionCode **VERSIONCODE**
+		versionName '**VERSIONNAME**'
+		ndk {
+			abiFilters **ABIFILTERS**
+		}
+		consumerProguardFiles 'proguard-unity.txt'**USER_PROGUARD**
+		
+		resValue 'string', 'com.crashlytics.android.build_id', '2b0f1d42-f011-489f-89ba-6e52eaf7ffd9'
+		resValue 'string', 'google_app_id', '1:729606024791:android:19b811cb113cb285e5bd12'
+		resValue 'string', 'project_id', 'cubox-998b7'
+		resValue 'string', 'gcm_defaultSenderId', '729606024791'
+		resValue 'string', 'google_api_key', 'AIzaSyAkN2suCADulu15jacpPdBIipouOsEp9Zg'
+		resValue 'string', 'google_crash_reporting_api_key', 'AIzaSyAkN2suCADulu15jacpPdBIipouOsEp9Zg'
+	}
+	
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+	
+	lintOptions {
+		abortOnError false
+	}
+	
+	aaptOptions {
+		noCompress = **BUILTIN_NOCOMPRESS** + unityStreamingAssets.tokenize(', ')
+		ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
+	}
+	
+	buildTypes {
+		debug {
+			minifyEnabled **MINIFY_DEBUG**
+			jniDebuggable true
+		}
+		release {
+			minifyEnabled **MINIFY_RELEASE**
+		}
+	}
+	
+	**PACKAGING_OPTIONS**
+	packagingOptions {
+		pickFirsts += jarPickFirsts
+		excludes += jarExcludes
+		exclude("META-INF/*.kotlin_module")
+	}
+}
+**IL_CPP_BUILD_SETUP**
+**SOURCE_BUILD_SETUP**
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation 'com.boombit:main-activity:1.5.1.1'
+	implementation 'com.facebook:facebook-android-wrapper:16.0.7.10'
+	implementation 'com.google.firebase:firebase-crashlytics'
+	implementation 'com.boombit:firebase-crashlytics:1.0.10.0'
+	implementation 'androidx.core:core-ktx:1.6.0'
+	implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.6.21'
+	implementation 'com.google.firebase:firebase-config-ktx'
+	implementation 'com.coredian:firebase-remote-config:1.0.24.0'
+	implementation enforcedPlatform('com.google.firebase:firebase-bom:32.8.1')
+	implementation 'com.google.firebase:firebase-analytics'
+	implementation 'com.google.firebase:firebase-inappmessaging-display'
+	implementation 'com.google.android.gms:play-services-auth:20.0.0'
+	implementation 'com.boombit:firebase-sdk:1.0.26.0'
+	implementation 'com.coredian:google-advertising-id:1.0.5.3'
+	implementation 'com.coredian.privacy:core-usercentrics:0.0.19.0'
+	implementation platform('org.jetbrains.kotlin:kotlin-bom:1.9.0')
+	implementation 'com.android.support:multidex:1.0.3'
+	implementation 'androidx.work:work-runtime:2.7.1'
+	implementation 'com.boombit:crosspromotion:2.3.25.0'
+	implementation 'com.appsflyer:af-android-sdk:6.12.2'
+	implementation 'com.appsflyer:unity-wrapper:6.12.21'
+	implementation 'com.android.installreferrer:installreferrer:2.2'
+	implementation 'com.appsflyer:adrevenue:6.9.1'
+	implementation 'com.appsflyer:unity-adrevenue-generic-wrapper:6.9.1'
+	implementation 'com.appsflyer:purchase-connector:2.0.0'
+	implementation 'com.appsflyer:af-purchaseconnector-unity:2.0.0'
+	implementation 'com.google.android.gms:play-services-auth:20.6.0'
+	implementation 'com.google.android.gms:play-services-identity:18.0.1'
+	implementation 'com.google.android.gms:play-services-analytics:18.0.3'
+	implementation 'com.google.android.gms:play-services-basement:18.1.0'
+	implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+	implementation 'com.google.android.gms:play-services-appset:16.0.0'
+	implementation 'com.ironsource.sdk:mediationsdk:7.7.0'
+	implementation 'com.ironsource:adqualitysdk:7.15.0'
+	implementation 'com.ironsource.adapters:admobadapter:4.3.41'
+	implementation 'com.google.android.gms:play-services-ads:21.5.0'
+	implementation 'com.ironsource.adapters:applovinadapter:4.3.41'
+	implementation 'com.applovin:applovin-sdk:12.1.0'
+	implementation 'com.ironsource.adapters:chartboostadapter:4.3.14'
+	implementation 'com.chartboost:chartboost-sdk:9.6.0'
+	implementation 'com.ironsource.adapters:facebookadapter:4.3.45'
+	implementation 'com.facebook.android:audience-network-sdk:6.16.0'
+	implementation 'com.ironsource.adapters:fyberadapter:4.3.29'
+	implementation 'com.fyber:marketplace-sdk:8.2.5'
+	implementation 'com.ironsource.adapters:inmobiadapter:4.3.21'
+	implementation 'com.inmobi.monetization:inmobi-ads-kotlin:10.6.2'
+	implementation 'com.ironsource.adapters:pangleadapter:4.3.23'
+	implementation 'com.pangle.global:ads-sdk:5.6.0.4'
+	implementation 'com.ironsource.adapters:unityadsadapter:4.3.34'
+	implementation 'com.unity3d.ads:unity-ads:4.9.2'
+	implementation 'com.ironsource.adapters:vungleadapter:4.3.23'
+	implementation 'com.vungle:vungle-ads:7.1.0'
+	implementation 'com.ironsource.adapters:smaatoadapter:4.3.9'
+	implementation 'com.smaato.android.sdk:smaato-sdk-banner:22.0.2'
+	implementation 'com.smaato.android.sdk:smaato-sdk-in-app-bidding:22.0.2'
+	implementation 'com.mbridge.msdk.oversea:mbbid:16.5.91'
+	implementation 'com.mbridge.msdk.oversea:reward:16.5.91'
+	implementation 'com.mbridge.msdk.oversea:mbbanner:16.5.91'
+	implementation 'com.mbridge.msdk.oversea:newinterstitial:16.5.91'
+	implementation 'com.ironsource.adapters:mintegraladapter:4.3.21'
+	implementation 'androidx.multidex:multidex:2.0.1'
+	implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.31'
+	implementation 'com.ironsource.adapters:hyprmxadapter:4.3.5'
+	implementation 'com.hyprmx.android:HyprMX-SDK:6.2.0'
+	implementation 'co.ogury:ogury-sdk:5.6.2'
+	implementation 'co.ogury:ogury-adapters-ironsource:5.6.2.0'
+	implementation 'com.bigossp:bigo-ads:4.4.0'
+	implementation 'com.bigossp:ironsource-mediation:4.4.0.0'
+	implementation 'com.ironsource.adapters:bidmachineadapter:4.3.3'
+	implementation 'io.bidmachine:ads:2.4.0'
+	implementation 'com.ironsource.adapters:apsadapter:4.3.11'
+	implementation 'com.amazon.android:aps-sdk:9.8.0'
+	implementation 'com.moloco.sdk.adapters:ironsource:1.7.0.0'
+	configurations {
+		implementation.exclude group: 'com.android.support', module: '*'
+	}
+	**DEPS**
+}
+
+subprojects {
+	afterEvaluate {project ->
+		if (project.hasProperty("android")) {
+			android {
+				packagingOptions {
+					pickFirsts += jarPickFirsts
+					excludes += jarExcludes
+					exclude("META-INF/*.kotlin_module")
+				}
+			}
+		}
+	}
+}

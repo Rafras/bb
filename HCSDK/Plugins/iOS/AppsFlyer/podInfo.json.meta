@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Editor/AppsFlyer/podInfo.json.meta
+guid: a986abe8ad4304cd489bacff5e6fb8c3
+========
+guid: 65f977279354b41aca41c696dfcb43e2
+>>>>>>>> develop-ALMAX:Assets/Editor/AppLovin/AdNetworks/Facebook/podInfo.json.meta
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

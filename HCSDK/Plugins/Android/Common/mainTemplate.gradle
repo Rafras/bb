@@ -1,0 +1,80 @@
+apply plugin: 'com.android.library'
+**APPLY_PLUGINS**
+Set<String> jarPickFirsts = [
+    'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.properties',
+    'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml',
+    'META-INF/maven/com.google.protobuf/protobuf-lite/pom.properties',
+    'META-INF/maven/com.google.protobuf/protobuf-lite/pom.xml',
+    'META-INF/maven/com.nineoldandroids/library/pom.properties',
+    'META-INF/maven/com.nineoldandroids/library/pom.xml',
+    'META-INF/services/com.fasterxml.jackson.core.ObjectCodec'
+]
+
+Set<String> jarExcludes = [
+    'assets/vg_close.png',
+    'assets/vg_cta.png',
+    'assets/vg_cta_disabled.png',
+    'assets/vg_mute_off.png',
+    'assets/vg_mute_on.png',
+    'assets/vg_privacy.png',
+    'assets/vg_timer.png',
+    'AndroidManifest.xml',
+    'META-INF/license.txt',
+    'META-INF/notice.txt'
+]
+
+android {
+    compileSdkVersion **APIVERSION**
+
+    defaultConfig {
+        minSdkVersion **MINSDKVERSION**
+        targetSdkVersion **TARGETSDKVERSION**
+        
+        ndk {
+            abiFilters **ABIFILTERS**
+        }
+        
+        versionCode **VERSIONCODE**
+        versionName '**VERSIONNAME**'
+        consumerProguardFiles 'proguard-unity.txt'**USER_PROGUARD**
+        
+        **BBSDK_VALUES**
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    aaptOptions {
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
+    packagingOptions {
+        pickFirsts += jarPickFirsts
+        excludes += jarExcludes
+    }**PACKAGING_OPTIONS**
+}**REPOSITORIES****SOURCE_BUILD_SETUP**
+**EXTERNAL_SOURCES**
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+**DEPS**}
+
+// need to inject this into all submodules (lib modules)
+// jars are merged for each submodule individually first, then into main one
+subprojects {
+    afterEvaluate {project ->
+        if (project.hasProperty("android")) {
+            android {
+                packagingOptions {
+                    pickFirsts += jarPickFirsts
+                    excludes += jarExcludes
+                }
+            }
+        }
+    }
+}

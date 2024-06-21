@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plist version="1.0">
+  <dict>
+    <key>appId</key>
+    <string>com.twopow.cubox</string>
+    <key>AppsFlyer_appId</key>
+    <string>com.twopow.cubox</string>
+    <key>Facebook_displayName</key>
+    <string>Cubox</string>
+    <key>Facebook_appId</key>
+    <string>7024639834226852</string>
+    <key>AdMob_app_id</key>
+    <string>ca-app-pub-2129001407304490~8892755104</string>
+    <key>AppsFlyer_devKey</key>
+    <string>bpBJA6NWyHURMP6mJDyNqM</string>
+    <key>AppLovin_id</key>
+    <string>hbi2E0uLXSPa98r-2F5LFfuw4ximVgyBGfEVf7rBZFmkNbiQrom5Se_XaiH4NDGduV7XdzkBDTwa3c0vPn_sP_</string>
+    <key>IronSource_id</key>
+    <string>1b4f6c615</string>
+  </dict>
+</plist>

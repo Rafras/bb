@@ -1,0 +1,48 @@
+{
+	"id": 870,
+	"name": "Cubox",
+	"platforms": [
+		{
+			"id": "1301",
+			"store_id": "com.twopow.cubox",
+			"store": "google_play",
+			"bundle_id": "com.twopow.cubox",
+			"name": "Google Play",
+			"description": "",
+			"values": {
+				"admob_app_id": "ca-app-pub-2129001407304490~8892755104",
+				"admob_banner": "ca-app-pub-2129001407304490/3448856736",
+				"admob_interstitial": "ca-app-pub-2129001407304490/6075020073",
+				"admob_video": "ca-app-pub-2129001407304490/5883448384",
+				"appsflyer_app_id": "com.twopow.cubox",
+				"appsflyer_dev_key": "bpBJA6NWyHURMP6mJDyNqM",
+				"facebook_app_id": "7024639834226852",
+				"facebook_client_token_id": "a5711e3ce7bcaf1768444b03790bdb98",
+				"facebook_display_name": "Cubox",
+				"facebook_fan_banner": "7024639834226852_7024653137558855",
+				"facebook_fan_intersitial": "7024639834226852_7024651017559067",
+				"facebook_fan_video": "7024639834226852_7024654370892065",
+				"firebase_app_id": "1:729606024791:android:19b811cb113cb285e5bd12",
+				"firebase_projectid": "cubox-998b7",
+				"fyber_app_id": "158094",
+				"ironsource_app_key": "1b4f6c615",
+				"max_sdk_key": "hbi2E0uLXSPa98r-2F5LFfuw4ximVgyBGfEVf7rBZFmkNbiQrom5Se_XaiH4NDGduV7XdzkBDTwa3c0vPn_sP_",
+				"mintegral_app_id": "230489",
+				"mintegral_app_key": "4f37f25d832a76c0b656767d87c346c1",
+				"platform_category_gp": "Action",
+				"platform_mediation": "ironSource",
+				"platform_orientation": "Landscape",
+				"platform_providers_account": "BoomBit",
+				"platform_store_account": "Rafras",
+				"tapjoy_app_id": "7251c378-b8bc-45d2-8525-62584aebea72",
+				"tapjoy_sdk_key": "clHDeLi8RdKFJWJYSuvqcgECAK8LgmV5kjDMxa4MLyeFhSwO4yUNhU7nPRoa",
+				"unityads_app_id": "5389077",
+				"vungle_app_id": "64e359407dd0db95c8120032"
+			}
+		}
+	],
+	"core_token": "d5e39b64-3022-4336-92cd-81cc4c8c95fa",
+	"created_at": "2023-08-21T11:22:28",
+	"updated_at": "2023-08-21T11:22:28",
+	"downloadedAt": "2024-02-16T15:17:47"
+}

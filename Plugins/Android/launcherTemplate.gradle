@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+
+Set<String> jarPickFirsts = [
+	'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.properties',
+	'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml',
+	'META-INF/maven/com.google.protobuf/protobuf-lite/pom.properties',
+	'META-INF/maven/com.google.protobuf/protobuf-lite/pom.xml',
+	'META-INF/maven/com.nineoldandroids/library/pom.properties',
+	'META-INF/maven/com.nineoldandroids/library/pom.xml',
+	'META-INF/services/com.fasterxml.jackson.core.ObjectCodec'
+]
+
+Set<String> jarExcludes = [
+	'assets/vg_close.png',
+	'assets/vg_cta.png',
+	'assets/vg_cta_disabled.png',
+	'assets/vg_mute_off.png',
+	'assets/vg_mute_on.png',
+	'assets/vg_privacy.png',
+	'assets/vg_timer.png',
+	'META-INF/license.txt',
+	'META-INF/notice.txt'
+]
+
+android {
+	ndkPath "**NDKPATH**"
+	
+	compileSdkVersion **APIVERSION**
+	buildToolsVersion '**BUILDTOOLS**'
+	
+	defaultConfig {
+		minSdkVersion **MINSDKVERSION**
+		targetSdkVersion **TARGETSDKVERSION**
+		versionCode **VERSIONCODE**
+		versionName '**VERSIONNAME**'
+		applicationId '**APPLICATIONID**'
+		multiDexEnabled true
+		ndk {
+			abiFilters **ABIFILTERS**
+		}
+	}
+	
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}**SIGN**
+	
+	lintOptions {
+		abortOnError false
+	}
+	
+	aaptOptions {
+		noCompress = **BUILTIN_NOCOMPRESS** + unityStreamingAssets.tokenize(', ')
+		ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
+	}
+	
+	buildTypes {
+		debug {
+			minifyEnabled **MINIFY_DEBUG**
+			proguardFiles getDefaultProguardFile('proguard-android.txt')**SIGNCONFIG**
+			jniDebuggable true
+		}
+		release {
+			minifyEnabled **MINIFY_RELEASE**
+			proguardFiles getDefaultProguardFile('proguard-android.txt')**SIGNCONFIG**
+		}
+	}
+	
+	**PACKAGING_OPTIONS****PLAY_ASSET_PACKS****SPLITS**
+	**PACKAGING_OPTIONS**
+	packagingOptions {
+		pickFirsts += jarPickFirsts
+		excludes += jarExcludes
+		exclude("META-INF/*.kotlin_module")
+	}
+**BUILT_APK_LOCATION**
+	bundle {
+		language {
+			enableSplit = false
+		}
+		density {
+			enableSplit = false
+		}
+		abi {
+			enableSplit = true
+		}
+	}
+}
+**SPLITS_VERSION_CODE**
+**LAUNCHER_SOURCE_BUILD_SETUP**
+
+dependencies {
+	implementation(group: 'com.android.support', name: 'multidex', version: '1.0.3')
+	implementation project(':unityLibrary')
+}
+

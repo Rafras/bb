@@ -1,0 +1,3 @@
+﻿<linker>
+	<assembly fullname="HCSDK" preserve="all" />
+</linker>

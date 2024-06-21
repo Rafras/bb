@@ -1,0 +1,18 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MolocoCustomAdapterIronSource
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import IronSource
+import MolocoCustomAdapter
+import MolocoSDK
+import Swift
+import _Concurrency
+import _StringProcessing
+@_inheritsConvenienceInitializers @objc public class MolocoIronSourceAdapter : ObjectiveC.NSObject {
+  @objc public class var adapterVersion: Swift.String {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}

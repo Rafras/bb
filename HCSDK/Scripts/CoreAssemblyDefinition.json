@@ -1,0 +1,67 @@
+{
+	"moduleId": "HCSDK",
+	"familyName": null,
+	"type": 2,
+	"requirements": [
+		{
+			"identifier": "core_main",
+			"type": 0
+		},
+		{
+			"identifier": "core_modules_facade",
+			"type": 0
+		},
+		{
+			"identifier": "core_unity",
+			"type": 0
+		},
+		{
+			"identifier": "logger",
+			"type": 0
+		},
+        {
+            "identifier": "facebook_interface",
+            "type": 0
+        },
+		{
+			"identifier": "facebook_sdk",
+			"type": 0
+		},
+		{
+			"identifier": "consent_interface",
+			"type": 0
+		},
+		{
+			"identifier": "firebase_interface",
+			"type": 0
+		},
+		{
+			"identifier": "decoreator_cross_promotion",
+			"type": 0
+		},
+		{
+			"identifier": "inapp_purchases_interface",
+			"type": 0
+		},
+		{
+			"identifier": "core_json_serializer",
+			"type": 0
+		},
+		{
+			"identifier": "AppsFlyer",
+			"type": 2
+		},
+		{
+			"identifier": "game_services",
+			"type": 0
+		},
+		{
+			"identifier": "advertising_id",
+			"type": 0
+		}
+	],
+	"platforms": [
+		
+	],
+	"fileVersion": 0
+}

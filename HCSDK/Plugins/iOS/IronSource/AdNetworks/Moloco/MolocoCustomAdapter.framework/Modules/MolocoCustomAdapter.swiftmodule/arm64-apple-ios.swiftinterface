@@ -1,0 +1,249 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MolocoCustomAdapter
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AdSupport
+import AppTrackingTransparency
+import Combine
+import CoreLocation
+import CoreTelephony
+import Foundation
+import StoreKit
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+public struct SkadRequestParameters {
+}
+public struct GeoData : Swift.Decodable, Swift.Encodable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum MolocoAdType : Swift.String, Swift.Decodable {
+  case banner
+  case mrec
+  case interstitial
+  case rewarded
+  case native
+  case unknown
+  public init(from decoder: Swift.Decoder) throws
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol BidNetworkService {
+  func startAuction(adType: MolocoCustomAdapter.MolocoAdType, adUnitID: Swift.String, adUnitName: Swift.String?, bidFloor: Swift.Float?, userID: Swift.String?, geo: MolocoCustomAdapter.GeoData?, region: Swift.String?, displayManager: Swift.String, displayManagerVer: Swift.String, publisherID: Swift.String, platformID: Swift.String, appID: Swift.String, adapter: Swift.String, adapterVersion: Swift.String, sdkVersion: Swift.String, skadRequestParameters: MolocoCustomAdapter.SkadRequestParameters?, nativeAdsRequirements: MolocoCustomAdapter.NativeAdRequirements?, completion: ((Foundation.Data?, MolocoCustomAdapter.MolocoHTTPResponse?) -> Swift.Void)?)
+}
+public protocol SKAdNetworkConstants {
+  var skadPlistIds: [Swift.String]? { get }
+  var versions: [Swift.String] { get }
+  var sourceApp: Swift.String { get }
+}
+extension MolocoCustomAdapter.SKAdNetworkConstants {
+  public var skadRequestParameters: MolocoCustomAdapter.SkadRequestParameters {
+    get
+  }
+}
+public class Log {
+  public init(event: Swift.String)
+  public func i(_ msg: Swift.String)
+  public func d(_ msg: Swift.String)
+  public func w(_ msg: Swift.String, err: Swift.String? = nil)
+  public func e(_ msg: Swift.String, err: Swift.String? = nil)
+  public func b(_ msg: Swift.String, err: Swift.String? = nil, event: Swift.String? = nil)
+  @objc deinit
+}
+public struct MolocoHTTPResponse {
+  public let httpStatusCode: Swift.Int?
+  public let error: Swift.Error?
+  public let responseData: Foundation.Data?
+  public let httpURLRequest: Foundation.URLRequest?
+  public let httpURLResponse: Foundation.HTTPURLResponse?
+  public var isStatusCode200: Swift.Bool {
+    get
+  }
+  public var isStatusCode204: Swift.Bool {
+    get
+  }
+  public var headers: [Swift.String : Swift.String]? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MolocoPrivacySettings : ObjectiveC.NSObject {
+  @objc public static var hasUserConsent: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public static var isAgeRestrictedUser: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public static var isDoNotSell: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public static var isUserConsentSet: Swift.Bool {
+    get
+  }
+  @objc public static var isAgeRestrictedUserSet: Swift.Bool {
+    get
+  }
+  @objc public static var isDoNotSellSet: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+public typealias HTTPParameters = [Swift.String : Any]
+public typealias HTTPHeaders = [Swift.String : Swift.String]
+public struct NativeAdRequirements : Swift.Encodable {
+  public enum NativeImageAssetID : Swift.Int {
+    case main
+    case icon
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum NativeDataAssetID : Swift.Int {
+    case ctaTitle
+    case description
+    case rating
+    case sponsored
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum NativeAdType {
+    case small
+    case image
+    case video
+    case unknown
+    public static func == (a: MolocoCustomAdapter.NativeAdRequirements.NativeAdType, b: MolocoCustomAdapter.NativeAdRequirements.NativeAdType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(assets: [MolocoCustomAdapter.NativeAdRequirements.Asset], context: MolocoCustomAdapter.NativeAdRequirements.NativeAdContext, privacy: Swift.Int, plcmttype: MolocoCustomAdapter.NativeAdRequirements.PlacementType? = nil, eventtrackers: [MolocoCustomAdapter.NativeAdRequirements.EventTracker]? = nil)
+  public static var smallNativeRequest: MolocoCustomAdapter.NativeAdRequirements {
+    get
+  }
+  public static var imageNativeRequest: MolocoCustomAdapter.NativeAdRequirements {
+    get
+  }
+  public static var videoNativeRequest: MolocoCustomAdapter.NativeAdRequirements {
+    get
+  }
+  public enum NativeAdContext : Swift.Int, Swift.Encodable {
+    case content
+    case social
+    case product
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum PlacementType : Swift.Int, Swift.Encodable {
+    case infeed
+    case atomic
+    case bannerStyle
+    case widget
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public struct Asset : Swift.Encodable {
+    public struct Img : Swift.Encodable {
+      public enum ImageType : Swift.Int, Swift.Encodable {
+        case icon
+        case main
+        public init?(rawValue: Swift.Int)
+        public typealias RawValue = Swift.Int
+        public var rawValue: Swift.Int {
+          get
+        }
+      }
+      public func encode(to encoder: Swift.Encoder) throws
+    }
+    public struct Title : Swift.Encodable {
+      public func encode(to encoder: Swift.Encoder) throws
+    }
+    public struct Video : Swift.Encodable {
+      public func encode(to encoder: Swift.Encoder) throws
+    }
+    public struct Data : Swift.Encodable {
+      public enum DataType : Swift.Int, Swift.Encodable {
+        case sponsored
+        case desc
+        case rating
+        case likes
+        case downloads
+        case price
+        case saleprice
+        case phone
+        case address
+        case desc2
+        case displayurl
+        case ctatext
+        public init?(rawValue: Swift.Int)
+        public typealias RawValue = Swift.Int
+        public var rawValue: Swift.Int {
+          get
+        }
+      }
+      public func encode(to encoder: Swift.Encoder) throws
+    }
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  public struct EventTracker : Swift.Encodable {
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class MolocoAdapter : ObjectiveC.NSObject {
+  @objc public class var adapterVersion: Swift.String {
+    @objc get
+  }
+  @available(iOS 13.0, *)
+  public class func createBidNetworkService(auctionApiUrl: Swift.String) -> MolocoCustomAdapter.BidNetworkService
+  @available(iOS 13.0, *)
+  public class func getSkadNetworkConstants() -> MolocoCustomAdapter.SKAdNetworkConstants
+  @available(iOS 13.0, *)
+  public class func getGeo(from json: Swift.String?) -> MolocoCustomAdapter.GeoData?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MolocoCustomAdapter.MolocoAdType : Swift.Equatable {}
+extension MolocoCustomAdapter.MolocoAdType : Swift.Hashable {}
+extension MolocoCustomAdapter.MolocoAdType : Swift.RawRepresentable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeImageAssetID : Swift.Equatable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeImageAssetID : Swift.Hashable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeImageAssetID : Swift.RawRepresentable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeDataAssetID : Swift.Equatable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeDataAssetID : Swift.Hashable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeDataAssetID : Swift.RawRepresentable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeAdType : Swift.Equatable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeAdType : Swift.Hashable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeAdContext : Swift.Equatable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeAdContext : Swift.Hashable {}
+extension MolocoCustomAdapter.NativeAdRequirements.NativeAdContext : Swift.RawRepresentable {}
+extension MolocoCustomAdapter.NativeAdRequirements.PlacementType : Swift.Equatable {}
+extension MolocoCustomAdapter.NativeAdRequirements.PlacementType : Swift.Hashable {}
+extension MolocoCustomAdapter.NativeAdRequirements.PlacementType : Swift.RawRepresentable {}
+extension MolocoCustomAdapter.NativeAdRequirements.Asset.Img.ImageType : Swift.Equatable {}
+extension MolocoCustomAdapter.NativeAdRequirements.Asset.Img.ImageType : Swift.Hashable {}
+extension MolocoCustomAdapter.NativeAdRequirements.Asset.Img.ImageType : Swift.RawRepresentable {}
+extension MolocoCustomAdapter.NativeAdRequirements.Asset.Data.DataType : Swift.Equatable {}
+extension MolocoCustomAdapter.NativeAdRequirements.Asset.Data.DataType : Swift.Hashable {}
+extension MolocoCustomAdapter.NativeAdRequirements.Asset.Data.DataType : Swift.RawRepresentable {}

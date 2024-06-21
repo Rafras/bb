@@ -1,0 +1,139 @@
+buildscript {
+	repositories {
+        google()
+		jcenter()
+	}
+
+	dependencies {
+		classpath 'com.android.tools.build:gradle:**BBSDK_ANDROID_PLUGIN_VERSION**'
+		classpath 'com.android.tools.build.jetifier:jetifier-processor:**BBSDK_JETIFIER_VERSION**'
+	}
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+([rootProject] + (rootProject.subprojects as List)).each {
+    ext {
+        it.setProperty("android.useAndroidX", true)
+        it.setProperty("android.enableJetifier", true)
+    }
+}
+
+apply plugin: 'com.android.application'
+
+Set<String> jarPickFirsts = [
+    'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.properties',
+    'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml',
+    'META-INF/maven/com.google.protobuf/protobuf-lite/pom.properties',
+    'META-INF/maven/com.google.protobuf/protobuf-lite/pom.xml',
+    'META-INF/maven/com.nineoldandroids/library/pom.properties',
+    'META-INF/maven/com.nineoldandroids/library/pom.xml',
+    'META-INF/services/com.fasterxml.jackson.core.ObjectCodec'
+]
+
+Set<String> jarExcludes = [
+    'assets/vg_close.png',
+    'assets/vg_cta.png',
+    'assets/vg_cta_disabled.png',
+    'assets/vg_mute_off.png',
+    'assets/vg_mute_on.png',
+    'assets/vg_privacy.png',
+    'assets/vg_timer.png',
+    'AndroidManifest.xml',
+    'META-INF/license.txt',
+    'META-INF/notice.txt'
+]
+
+android {
+	compileSdkVersion **APIVERSION**
+
+	defaultConfig {
+        minSdkVersion **MINSDKVERSION**
+		targetSdkVersion **TARGETSDKVERSION**
+        versionCode **VERSIONCODE**
+        versionName '**VERSIONNAME**'
+
+        ndk {
+            abiFilters **ABIFILTERS**
+        }
+
+        applicationId '**APPLICATIONID**'
+        multiDexEnabled **BBSDK_MULTIDEX_ENABLED**
+        **BBSDK_VALUES**
+	}**SIGN**
+
+	buildTypes {
+        debug {
+            minifyEnabled **MINIFY_DEBUG**
+            //useProguard **PROGUARD_DEBUG**
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'**USER_PROGUARD****SIGNCONFIG**
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled **MINIFY_RELEASE**
+            //useProguard **PROGUARD_RELEASE**
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'**USER_PROGUARD****SIGNCONFIG**
+        }
+	}
+    
+	lintOptions {
+		abortOnError false
+	}
+
+    aaptOptions {
+        noCompress '.unity3d', '.ress', '.resource', '.obb'**STREAMING_ASSETS**
+        ignoreAssetsPattern "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }
+	
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+**PACKAGING_OPTIONS**
+    packagingOptions {
+        pickFirsts += jarPickFirsts
+        excludes += jarExcludes
+    }
+    
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = false
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+}
+
+// need to inject this into all submodules (lib modules)
+// jars are merged for each submodule individually first, then into main one
+subprojects {
+    afterEvaluate {project ->
+        if (project.hasProperty("android")) {
+            android {
+                packagingOptions {
+                    pickFirsts += jarPickFirsts
+                    excludes += jarExcludes
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+**BBSDK_DEPS****DEPS**}
+
+**SOURCE_BUILD_SETUP**

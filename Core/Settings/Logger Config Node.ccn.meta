@@ -1,0 +1,105 @@
+fileFormatVersion: 2
+guid: 58bbecec50d1dd1499387bb0e4da1105
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 8857f7389421faf408fa6118b9dbd9e5, type: 3}
+  jsonConfigNode:
+    rid: 1000
+  enabled: 1
+  currentVariant: None
+  variants:
+  - None
+  references:
+    version: 2
+    RefIds:
+    - rid: 1000
+      type: {class: LoggerConfiguratorConfigNode, ns: Coredian.FilteredLoggerConfigurator, asm: LoggerConfigurator}
+      data:
+        releaseBuildFilterSettings:
+          outputType: Coredian.FilteredLogger.Output.UnityOutput
+          typeFilter: 6
+          autogenerateCategories: 1
+        devBuildFilterSettings:
+          outputType: Coredian.FilteredLogger.Output.UnityOutput
+          typeFilter: 2147483647
+          autogenerateCategories: 1
+        editorFilterSettings:
+          outputType: Coredian.FilteredLogger.Output.UnityOutput
+          typeFilter: 2147483647
+          autogenerateCategories: 1
+        predefinedCategories:
+          disableNameChanges: 1
+          disableCategoriesChanges: 1
+          name: Predefined Categories
+          categories:
+          - category: Core
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.Assets
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.BoomBitIdsImporter
+            logTypeFilter: 7
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.Build
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.BuildTools.Android.Editor
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.BuildTools.Apple.Editor
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.CrossPromo
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.CrossPromo.WaterfallSource
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.Data
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.Data.Serialization
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.Diagnostics
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.Facebook
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.Firebase
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Coredian.StoreVariants
+            logTypeFilter: 5
+            minimumPriority: 0
+            readOnlyCategory: 1
+          - category: Facebook
+            logTypeFilter: 6
+            minimumPriority: 0
+            readOnlyCategory: 1
+        customCategories: []
+        groupedCategories: []

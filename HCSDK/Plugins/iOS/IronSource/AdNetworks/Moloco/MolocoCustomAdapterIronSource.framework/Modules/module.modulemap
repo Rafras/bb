@@ -1,0 +1,4 @@
+framework module MolocoCustomAdapterIronSource {
+  header "MolocoCustomAdapterIronSource-Swift.h"
+  requires objc
+}

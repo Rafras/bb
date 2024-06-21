@@ -1,0 +1,5 @@
+{
+	"firebaseConfigs": {
+		"1301": "{\n  \"project_info\": {\n    \"project_number\": \"729606024791\",\n    \"project_id\": \"cubox-998b7\",\n    \"storage_bucket\": \"cubox-998b7.appspot.com\"\n  },\n  \"client\": [\n    {\n      \"client_info\": {\n        \"mobilesdk_app_id\": \"1:729606024791:android:19b811cb113cb285e5bd12\",\n        \"android_client_info\": {\n          \"package_name\": \"com.twopow.cubox\"\n        }\n      },\n      \"oauth_client\": [\n        {\n          \"client_id\": \"729606024791-cb78etep1h5ea5b8jn4gi3tr58dj4ash.apps.googleusercontent.com\",\n          \"client_type\": 3\n        }\n      ],\n      \"api_key\": [\n        {\n          \"current_key\": \"AIzaSyAkN2suCADulu15jacpPdBIipouOsEp9Zg\"\n        }\n      ],\n      \"services\": {\n        \"appinvite_service\": {\n          \"other_platform_oauth_client\": [\n            {\n              \"client_id\": \"729606024791-cb78etep1h5ea5b8jn4gi3tr58dj4ash.apps.googleusercontent.com\",\n              \"client_type\": 3\n            }\n          ]\n        }\n      }\n    }\n  ],\n  \"configuration_version\": \"1\"\n}"
+	}
+}

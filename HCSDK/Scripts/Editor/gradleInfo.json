@@ -1,0 +1,300 @@
+{
+	"repositories": [
+		{
+			"url": "https:\/\/artifactory.boombit.com\/artifactory\/libs-release"
+		},
+		{
+			"url": "https:\/\/android-sdk.is.com\/"
+		},
+		{
+			"url": "https:\/\/cboost.jfrog.io\/artifactory\/chartboost-ads\/"
+		},
+		{
+			"url": "https:\/\/s3.amazonaws.com\/smaato-sdk-releases"
+		},
+		{
+			"url": "https:\/\/artifact.bytedance.com\/repository\/pangle"
+		},
+		{
+			"url": "https:\/\/dl-maven-android.mintegral.com\/repository\/mbridge_android_sdk_oversea"
+		},
+		{
+			"url": "https:\/\/maven.ogury.co"
+		},
+        {
+          "url": "https:\/\/artifactory.bidmachine.io\/bidmachine"
+        }
+	],
+	"dependencies": [
+		{
+			"group": "com.appsflyer",
+			"name": "af-android-sdk",
+			"version": "6.12.2"
+		},
+		{
+			"group": "com.appsflyer",
+			"name": "unity-wrapper",
+			"version": "6.12.21"
+		},
+		{
+			"group": "com.android.installreferrer",
+			"name": "installreferrer",
+			"version": "2.2"
+		},
+		{
+			"group": "com.appsflyer",
+			"name": "adrevenue",
+			"version": "6.9.1"
+		},
+		{
+			"group": "com.appsflyer",
+			"name": "unity-adrevenue-generic-wrapper",
+			"version": "6.9.1"
+		},
+		{
+			"group": "com.appsflyer",
+			"name": "purchase-connector",
+			"version": "2.0.0"
+		},
+		{
+			"group": "com.appsflyer",
+			"name": "af-purchaseconnector-unity",
+			"version": "2.0.0"
+		},
+		{
+			"group": "com.google.android.gms",
+			"name": "play-services-auth",
+			"version": "20.6.0"
+		},
+		{
+			"group": "com.google.android.gms",
+			"name": "play-services-identity",
+			"version": "18.0.1"
+		},
+		{
+			"group": "com.google.android.gms",
+			"name": "play-services-analytics",
+			"version": "18.0.3"
+		},
+		{
+			"group": "com.google.android.gms",
+			"name": "play-services-basement",
+			"version": "18.1.0"
+		},
+		{
+			"group": "com.google.android.gms",
+			"name": "play-services-ads-identifier",
+			"version": "18.0.1"
+		},
+		{
+			"group": "com.google.android.gms",
+			"name": "play-services-appset",
+			"version": "16.0.0"
+		},
+        {
+          "group": "com.ironsource.sdk",
+          "name": "mediationsdk",
+          "version": "7.7.0"
+        },
+        {
+          "group": "com.ironsource",
+          "name": "adqualitysdk",
+          "version": "7.15.0"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "admobadapter",
+          "version": "4.3.41"
+        },
+		{
+			"group": "com.google.android.gms",
+			"name": "play-services-ads",
+			"version": "21.5.0"
+		},
+        {
+          "group": "com.ironsource.adapters",
+          "name": "applovinadapter",
+          "version": "4.3.41"
+        },
+        {
+          "group": "com.applovin",
+          "name": "applovin-sdk",
+          "version": "12.1.0"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "chartboostadapter",
+          "version": "4.3.14"
+        },
+        {
+          "group": "com.chartboost",
+          "name": "chartboost-sdk",
+          "version": "9.6.0"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "facebookadapter",
+          "version": "4.3.45"
+        },
+        {
+          "group": "com.facebook.android",
+          "name": "audience-network-sdk",
+          "version": "6.16.0"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "fyberadapter",
+          "version": "4.3.29"
+        },
+        {
+          "group": "com.fyber",
+          "name": "marketplace-sdk",
+          "version": "8.2.5"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "inmobiadapter",
+          "version": "4.3.21"
+        },
+        {
+          "group": "com.inmobi.monetization",
+          "name": "inmobi-ads-kotlin",
+          "version": "10.6.2"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "pangleadapter",
+          "version": "4.3.23"
+        },
+        {
+          "group": "com.pangle.global",
+          "name": "ads-sdk",
+          "version": "5.6.0.4"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "unityadsadapter",
+          "version": "4.3.34"
+        },
+        {
+          "group": "com.unity3d.ads",
+          "name": "unity-ads",
+          "version": "4.9.2"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "vungleadapter",
+          "version": "4.3.23"
+        },
+        {
+          "group": "com.vungle",
+          "name": "vungle-ads",
+          "version": "7.1.0"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "smaatoadapter",
+          "version": "4.3.9"
+        },
+        {
+          "group": "com.smaato.android.sdk",
+          "name": "smaato-sdk-banner",
+          "version": "22.0.2"
+        },
+        {
+          "group": "com.smaato.android.sdk",
+          "name": "smaato-sdk-in-app-bidding",
+          "version": "22.0.2"
+        },
+		{
+			"group": "com.mbridge.msdk.oversea",
+			"name": "mbbid",
+			"version": "16.5.91"
+		},
+		{
+			"group": "com.mbridge.msdk.oversea",
+			"name": "reward",
+			"version": "16.5.91"
+		},
+		{
+			"group": "com.mbridge.msdk.oversea",
+			"name": "mbbanner",
+			"version": "16.5.91"
+		},
+		{
+			"group": "com.mbridge.msdk.oversea",
+			"name": "newinterstitial",
+			"version": "16.5.91"
+		},
+		{
+			"group": "com.ironsource.adapters",
+			"name": "mintegraladapter",
+			"version": "4.3.21"
+		},
+		{
+			"group": "androidx.multidex",
+			"name": "multidex",
+			"version": "2.0.1"
+		},
+		{
+			"group": "org.jetbrains.kotlin",
+			"name": "kotlin-stdlib",
+			"version": "1.4.31"
+		},
+        {
+          "group": "com.ironsource.adapters",
+          "name": "hyprmxadapter",
+          "version": "4.3.5"
+        },
+        {
+          "group": "com.hyprmx.android",
+          "name": "HyprMX-SDK",
+          "version": "6.2.0"
+        },
+        {
+          "group": "co.ogury",
+          "name": "ogury-sdk",
+          "version": "5.6.2"
+        },
+        {
+          "group": "co.ogury",
+          "name": "ogury-adapters-ironsource",
+          "version": "5.6.2.0"
+        },
+        {
+          "group": "com.bigossp",
+          "name": "bigo-ads",
+          "version": "4.4.0"
+        },
+        {
+          "group": "com.bigossp",
+          "name": "ironsource-mediation",
+          "version": "4.4.0.0"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "bidmachineadapter",
+          "version": "4.3.3"
+        },
+        {
+          "group": "io.bidmachine",
+          "name": "ads",
+          "version": "2.4.0"
+        },
+        {
+          "group": "com.ironsource.adapters",
+          "name": "apsadapter",
+          "version": "4.3.11"
+        },
+        {
+          "group": "com.amazon.android",
+          "name": "aps-sdk",
+          "version": "9.8.0"
+        }
+    ],
+	"resValues": [
+		
+	],
+	"packageDefinition": null,
+	"fileVersion": 1
+}

@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Editor/AppsFlyer/AppsFlyerAdRevenue/podInfo.json.meta
+guid: c47ca2f03740d4f1d9b2a6509c75f48e
+========
+guid: 5ef63554f0d944d3488baf13f02b302f
+>>>>>>>> develop-ALMAX:Assets/Editor/AppLovin/AdNetworks/OguryPresage/podInfo.json.meta
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

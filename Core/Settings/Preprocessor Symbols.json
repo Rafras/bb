@@ -1,0 +1,23 @@
+{
+    "symbols": [
+        {
+            "symbol": "TOUCHSCRIPT_DEBUG",
+            "allowStatusChange": true,
+            "type": 0,
+            "platform": 0,
+            "isEnabled": true
+        }
+    ],
+    "predefinedSymbolsStatus": [
+        {
+            "symbol": "CORE_DIAGNOSTICS",
+            "allowStatusChange": true,
+            "type": 0,
+            "platform": 0,
+            "isEnabled": false
+        }
+    ],
+    "knownPlatforms": [
+        3
+    ]
+}

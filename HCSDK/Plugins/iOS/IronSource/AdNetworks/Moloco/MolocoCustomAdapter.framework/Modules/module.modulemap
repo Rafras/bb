@@ -1,0 +1,4 @@
+framework module MolocoCustomAdapter {
+  header "MolocoCustomAdapter-Swift.h"
+  requires objc
+}

@@ -1,0 +1,30 @@
+{
+	"name": "HCSDK-Editor",
+	"autoReferenced": true,
+	"references": [
+		"Core",
+		"ModulesFacade",
+		"CoreUnity",
+		"Android Build Tools-Editor",
+		"AppleBuildTools-Editor",
+		"Coredian.StoreVariants.Editor-Editor",
+		"Coredian.StoreVariants",
+		"HCSDK",
+		"JsonSerializer"
+	],
+	"includePlatforms": [
+		"Editor"
+	],
+	"excludePlatforms": [
+		
+	],
+	"optionalUnityReferences": [
+		
+	],
+	"precompiledReferences": [
+		
+	],
+	"defineConstraints": [
+		
+	]
+}

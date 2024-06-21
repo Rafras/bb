@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "729606024791",
+    "project_id": "cubox-998b7",
+    "storage_bucket": "cubox-998b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729606024791:android:19b811cb113cb285e5bd12",
+        "android_client_info": {
+          "package_name": "com.twopow.cubox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729606024791-cb78etep1h5ea5b8jn4gi3tr58dj4ash.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkN2suCADulu15jacpPdBIipouOsEp9Zg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729606024791-cb78etep1h5ea5b8jn4gi3tr58dj4ash.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

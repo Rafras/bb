@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ddc39cde0fdd0b49b19ff81453b8a90, type: 3}
+  m_Name: Application Metadata Config Node
+  m_EditorClassIdentifier: 
+  useThisConfig: 1
+  isUpToDateWithConfig: 1
+  googleSheetsCache:
+    url: 
+    sheetsNames: []
+    sheetsGuids: []
+    preferredSheet: 
+  companyIndex: 4
+  termsOfServiceUrl: https://boombit.com/terms-of-service/
+  privacyPolicyUrl: https://boombit.com/privacy-policy/
+  localizedUrls:
+  - isoLanguageCode: pl
+    privacyPolicyUrl: https://boombit.com/pl/polityka-prywatnosci/
+    termsOfServiceUrl: https://boombit.com/pl/warunki-korzystania-z-uslugi/
+  - isoLanguageCode: ja
+    privacyPolicyUrl: https://boombit.com/ja/privacy-policy-ja/
+    termsOfServiceUrl: https://boombit.com/ja/terms-of-service-ja/
+  - isoLanguageCode: zh-cn
+    privacyPolicyUrl: https://boombit.com/zh/privacy-policy-zn-ch/
+    termsOfServiceUrl: 
+  - isoLanguageCode: ko
+    privacyPolicyUrl: https://boombit.com/ko/privacy-policy-ko/
+    termsOfServiceUrl: https://boombit.com/ko/terms-of-service-ko/
+  advertisingAttributionReportEndpoint: https://skadnetwork-boombit.com
+  appStoreId: 

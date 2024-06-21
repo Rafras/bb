@@ -1,0 +1,910 @@
+HCSDK 1.56
+
+- [IronSource] Updated IronSource SDK to 7.7.0.
+- [IronSource] Added Amazon Publisher Services Mediation Network.
+- [IronSource] Added Moloco on iOS.
+- [IronSource] Added support for Moloco on Unity 2021.
+- [IronSource] Added possibility to turn on and off shouldTrackNetworkState method from IronSource.
+- Added HCSDK.OpenConsentManagement() method, used to open consent management view.
+- Removed usage of AppsFlyer_appId.
+- Extended TesterGUI functionality to show Cross Promotion's ads source.
+
+HCSDK 1.55.1
+
+- Ironsource AdMob SDK downgrade
+
+HCSDK 1.55
+
+- Ironsource and mediation update
+
+HCSDK 1.54
+
+- Added support for Consent 3.0 with Usercentrics.
+
+HCSDK 1.53
+
+- ad_impression send directly to Facebook, if FB_TRACKING_AD_IMPRESSION set to TRUE in Firebase Remote Config or in webconfigurator
+- BidMachine and Moloco added as ad networks
+- Moloco on Android will be added to build only for Unity 2022 or later
+- added MoreGames support
+
+HCSDK 1.52.1
+
+- Fixed postprocess for Unity 2021.3.32 and 2022.3.13 and newer versions.
+
+HCSDK 1.52.0
+
+- Removed Firebase interfaces and added support for new Firebase Interface module.
+- [IronSource] Ironsource update.
+- [IronSource] Added Bigo Ads.
+- [ALMAX] ALMAX update.
+
+HCSDK 1.51.3
+
+- [Android] Fixed issue with CoreAssemblyDefinition from 1.51.2.
+
+HCSDK 1.51.2
+
+- [Android] Added Channel Metadata to manifest for Amazon and Samsung based on Store Variants.
+
+HCSDK 1.51.1
+
+- [IS] InMobi updated to 10.5.9, required because of Volition of User Data in previous version of InMobi (10.5.7)
+
+HCSDK 1.51.0
+
+- Ironsource update
+- AppsFlyer Updated
+- AdQuality updated to 7.13.1
+- Added possibility for whitelist ad_revenue events by installation source
+
+HCSDK 1.50.2
+
+- Fixed issue where last ad_revenue_over are sent to AppsFlyer more then once per user.
+
+HCSDK 1.50.1
+
+- Added Game Services and Firebase Cloud Messaging to CoreAssemblyDefinition
+- Added option for changing position of FPS counter 
+
+HCSDK 1.50.0
+
+- Replacing the Facebook implementation with the Facebook module
+- Wrapped HCSDK into assembly
+- Added option for Set Custom User Id in AppsFlyer, method HCSDK.SetCusomUserId, after adding USE_CUSTOM_USER_ID to local configuration HCSDK wait for CUID before starting AppsFlyer
+- Added to parameters for remote configuration XpigInterstitialMaxNumber and XpigRewardedMaxNumber, to limit the number of CrossPromo ads displayed by the HCSDK
+
+HCSDK 1.49.0
+
+- Fixed issue where ad_revenue_over are sent to AppsFlyer more then once per user.
+- Updated IronSource mediation with adapters/networks.
+
+HCSDK 1.48.0
+
+- Removed SKAD Mapping (according BI guidelines)
+- Added FPS Counter option to TesterGUI 
+
+HCSDK 1.47.1
+
+- Changed ad_revenue_over events sent to AppsFlyer (removed 0.1, 0.2, added 0.7)
+
+HCSDK 1.47.0
+
+- Simple FPS counter added
+- Unity Store defines removed
+- money spent tracked in Facebook as normal events
+- Appsflyer update
+- Play Services from HCSDK manifest removed
+- Deprecated methods TrackPurchase from HCSDK removed
+- Appsflyer can now timeout on iOS
+- Updated Android AdMob adapter and SDK
+- Added Android AdMob flags for optimization (possible ANR fix)
+- Added placement to ad_impression event as ad_unit_name (according BI guidelines)
+
+
+HCSDK 1.46.0
+
+- [IronSource] IronSource ImpressionSuccessEvent called in the main thread.
+- Fixed issue on Android when Android version of Module In-App Purchases is not installed. 
+- Google_PublicKey is no longer required. 
+- Changed logic of sending impression data to FB (according BI guidelines).
+- Added AppsFlyer events ad_revenue_over_X if AF_TRACKING_IMPRESSION set to TRUE in Firebase Remote Config.
+- Added IronSource Test Suite, enabled when key IS_TEST_SUITE_ON is seto to TRUE.
+- IronSource with mediation updated
+
+HCSDK 1.45.1
+
+- [ANDROID] HCSDK does not require Billing library as a dependency.
+
+HCSDK 1.45.0
+
+- IronSource update
+- Added safeguard when StarHCSDK in Awake and waiting for Core Remote Config is turned on
+- unique_app_name is no longer required
+- [IronSource] Added safeguard for missing IronSource events while showing banners
+- [IronSource] Changed Banner size to BANNER from SMART (Unity Ads doesn't support SMART)
+
+HCSDK 1.44.2
+
+- [IronSource] Fixed interstitial loading
+
+HCSDK 1.44.0
+
+- Updated AppsFlyer to 6.9.1 on iOS and to 6.9.4 on Android
+- Added AppsFlyer Purchase Connector (The required target SDK version is at least 31)
+- Removed Subscription Reporter and marked TrackPurchase method as deprecated, AppsFlyer Purchase Connector will cover this functionality
+- [IronSource] Added checking network connectivity status 
+- Removed setting ITSAppUsesNonExemptEncryption from HCSDK postprocess
+- Updated play-services-basement to 18.1.0
+- Updated Ads Mediation
+- Changed logic of sending impression data to FB (according BI guidelines) 
+
+HCSDK 1.43.0
+
+- [IronSource] Embeded ad frameworks are downloaded by CocoaPods on iOS
+- [IronSource] Updated IronSource plugin, SDK and all networks
+- [IronSource] Added HyprMX
+- [IronSource] Added Ogury 
+- [IronSource] Removed redundant gradle dependencies
+- [IronSource] Segmentation changes: 3 configurable segments, info about paying user
+- [IronSource] Protection against incorrect data
+- [IronSource] Added IronSource AdQuality Plugin
+
+HCSDK 1.42.1
+
+- Mintegral provider added 
+
+HCSDK 1.42.0
+
+- Firebase API removed from HCSDK
+- Ironsource update
+- [Support U2022] Changes http to https in Scheme Updater 
+- Fixed Enable Bitcode flag on Xcode 14, was also set on Main Target 
+
+HCSDK 1.41.2
+
+- Removed custom_ad_impression event
+- Now supports and requires Advertising ID module
+- No longer requires modules: Advertisements, Advertisements Interface
+
+HCSDK 1.41.1
+
+- CrossPromo rewarded video can be now shown only with "CpRewardedPossibleFirst" in config set on "TRUE"
+
+HCSDK 1.41.0
+
+- CrossPromo interstitial can be now shown only with "CpInterstitialPossibleFirst" in config set on "TRUE"
+
+HCSDK 1.40.0
+
+- Cross Promo destroyed after Core Reinitialization
+- Fixed AppsFlyer product price formatting
+- Warning if Consent Undefined
+
+HCSDK 1.39.0
+
+- CrosspromoInterval is now set to 0 by default
+- IsRewardedReady can now exclude check for crosspromo
+- ad providers updated
+
+HCSDK 1.38.1
+
+- update AppsFlyer 6.5.4
+
+HCSDK 1.38.0
+
+- added support for Game Services module
+- removed GameCenter and GooglePlayGame (moved to Game Services module)
+
+HCSDK 1.37.3 - IS
+
+- use AppsFlyer SKAdNetwork for MidCore by default
+
+HCSDK 1.37.2 - IS
+
+- Fixed defines related to Firebase SDK module in HCSDK.SendEvent and HCSDK.SetProperty methods
+
+HCSDK 1.37.0 - IS
+
+- Ironsource mediation update
+- removed adding capabilities by HCSDK
+- added AppsFlyer AdRevenue Connector
+- stopped sending Conversion Value for midcore game (instead of this we will send impression data to AppsFlyer)
+- sending impression data to Facebook as purchase if FB_TRACKING_IMPRESSION set to TRUE in Remote Config
+- HCSDK.IsRewardedReady will return true, when mediation is not ready, but cross promo have cached ads
+
+HCSDK 1.36.1 - IS
+
+- new parameter in local config GPGS_key for GPGS
+- HCSDK.ReceivedConversionData event with conversion Data
+
+HCSDK 1.36.0 - IS
+
+- removed all Huawei references
+- AppsFlyer send Additional Data with important modules and HCSDK versions
+- use swizzling for AppsFlyer continueUserActivity on iOS
+
+HCSDK 1.35.0 - IS
+
+- GoogleAdManager added to ALMAX (only ALMAX version)
+- Stop loading banners on start of application. (only ALMAX version)
+- removed Firebase Events "ads_"
+- Firebase SDK is no longer part of HCSDK, now HCSDK will use Firebase modules
+- old Firbebase API calls in HCSDK facade are deprecated now, and will be removed after 3-month-long grace period
+- HCSDK.StartHCSDK(); will wait for Core if not initialized
+
+HCSDK 1.34.0 - IS
+
+- updated IronSource and all ad networks 
+ 
+HCSDK 1.33.1 - IS
+
+- add missing exported attribute in Android manifest
+- add Firebase event custom_ad_impression
+
+HCSDK 1.33.0 - IS
+
+- replace usage of Unity's Application.RequestAdvertisementIdentifierAsync with respective call from Advertisements module
+- updated support for In-App Purchases module
+- purchase tracking fixes
+
+HCSDK 1.32.1 - IS
+
+- updated support for In-App Purchases module
+- Firebase Crashlytisc and Messagign module now requires Consent module
+
+HCSDK 1.32.0 - IS
+
+- changes requested for BI
+
+HCSDK 1.31.0 - IS
+
+- update Firebase Android SDK to 28.4.2
+- update IronSource and all ad networks   
+- move ad networks to pods 
+
+HCSDK 1.30.0 - IS
+
+- Liftoff, Android 4.3.1, iOS 4.3.0
+- AppsFlyer 6.4.1
+- move AppsFlyer iOS SDK to pods
+- Moved Android manifest permissions to respective modules
+- Fixed store version-related warning while uploading to GP
+
+HCSDK 1.29.1 - IS
+
+- downgrade GP Facebook SDK to 11.2
+
+HCSDK 1.29.0 - IS
+
+- update Unity Facebook to 11.0, iOS Facebook to 11.2.1, GP Facebook to 11.3.0
+- move iOS Facebook to pods
+- Added support for the upcoming Core In-App Purchases module.
+- new define for In-App Purchases: USE_UNITY_PURCHASING for enabling/disabling Unity Purchasing
+- define no_UnityStore will work as before, but will be removed in the future and completely replaced by USE_UNITY_PURCHASING
+- hidden shortcut to open Tester GUI (Firebase Remote Config key: TESTER_GUI_ON value: TRUE, gesture sequence like BBSDK)
+- UnityWebRequest is now disposed correctly
+
+HCSDK 1.28.2 - IS
+
+- fix compile error when define no_UnityStore is set
+
+HCSDK 1.28.1 - IS
+
+- purchases with same transaction id will be tracked only once
+- purchases made more than a day ago will be not tracked on Android
+
+HCSDK 1.28.0 - IS
+
+- This version can be released in Xcode 13
+- ads mediation will wait for conversion data from AppsFlyer only if wait_for_deeplink is set to TRUE
+- remove Whitelist popup
+- update IronSource GP to 7.1.10, iOS to 7.1.11 
+- update IS iOS Adapters: FB 4.3.29, AC 4.3.11, AdMob 4.3.27, AL 4.3.28, CB 4.3.8, Fyber 4.3.19, IM 4.3.12, MyTarget 4.1.11, Pangle 4.3.8, Smaato 4.3.3, Snap 4.3.2, TJ 4.1.18, UA 4.3.14, Vungle 4.3.14
+- update IS GP Adapters: AC 4.3.9, AdMob 4.3.22, AL 4.3.28, FB 4.3.30, CB 4.3.7, Fyber 4.3.16, IM 4.3.12, MyTarget 4.1.11, Pangle 4.3.6, Smaato 4.3.3, TJ 4.1.18, UA 4.3.14, VU 4.3.11
+- MoPub removed on both platform
+- AppsFlyerAdRevenue removed (was working only for MoPub)
+- rework of Firebase event ad_fail
+
+HCSDK 1.27.3
+
+- fixed regression from 1.27.2
+
+HCSDK 1.27.2
+
+- pending/deferred purchases will now be ignored and not tracked on Android
+
+HCSDK 1.27.1
+
+- send additional parameters order id and purchase token to AppsFlyer when Track Purchase
+
+
+HCSDK 1.27.0
+
+- update IS to 7.1.7
+- update MP to 5.17.0
+- update IS iOS Adapters: AC 4.3.10, AdMob 4.3.24, AL 4.3.26, FB 4.3.27, CB 4.3.7, Fyber 4.3.17, IM 4.3.11, MyTarget 4.1.9, Smaato 4.3.2, TJ 4.1.17, UA 4.3.10, VU 4.3.11, Snap 4.3.1
+- update MP iOS Adapters: IS 7.1.7.0.0, AdMon 8.7.0.0, AL 10.3.2.0, FB 6.5.1.0, CB 8.4.2.1, Fyber 7.8.6.0, IM 9.2.0.0, TJ 12.8.1.0, UA 3.7.2.1, VU 6.9.2.1, 
+- update IS GP Adapters: AC 4.3.8, AdMob 4.3.21, AL 4.3.26, FB 4.3.28, CB 4.3.6, Fyber 4.3.14, IM 4.3.11, MyTarget 4.1.9, Pangle 4.3.4, Smaato 4.3.2, TJ 4.1.17
+- update MP GP Adapters: IS 7.1.7.0, AC 4.5.0.1, AdMob 20.2.0.1, AL 10.3.1.0, FB 6.5.1.0, CB 8.2.1.0, Fyber 7.8.3.0, IM 9.2.0.0, Pamngle 3.7.1.4.0, TJ 12.8.1.0
+
+HCSDK 1.26.0
+
+- update FB Audience Network on Android to 6.5.0 (IS 4.3.27, MP 6.5.0.0)
+- support for Unity 2020 LTS 
+- potential fix for crashes on Android 
+- remove funcinality for showing interstital when video fail
+- added method to get installation token required for A/B Testing
+- log in Crashlytics HCSDK Version, and other important stuff
+- invoke updateConversionValue 0 after RegisterAppForAdNetworkAttribution
+- updateConversionValue also will send value to Firebase (iOS only)
+- event ConversionReporter.ConversionValueUpdate will trigger always when updateConversionValue (iOS only)
+- new parameter in local config HC_USE_AF_SKADNETWORK, if TRUE, HCSDK will use AppsFlyer solution for SKAdNetwork, FALSE by default, if developer don't have other information should set to FALSE
+- fix manual push registration (push_manual)
+- to turn off autologin to GameCenter set "manual_gamecenter_login" key on TRUE
+- propagate Remote Config updates in real time (more info https://firebase.google.com/docs/remote-config/propagate-updates-realtime)
+- FirebaseRemoteConfig.TestMode() sets minimum fetch interval on 0s
+- fix purchase tracking after restoring, new parameters in TrackPurchase method: extensions and restoringInapps. iOS only: To handle restoringInapps flag use method UnityEngine.Purchasing.IAppleExtensions.RestoreTransactions.
+- fix problem with Firebase Messaging
+
+HCSDK 1.25.5
+
+- fix ChartBoost and AdColony (Received status code 403) 
+
+HCSDK 1.25.4
+
+- update UnityAds on Android to 3.7.2 (contains a fix for UnityAds ANR) 
+
+HCSDK 1.25.3
+
+- update fyber adapter dependencies
+
+HCSDK 1.25.2
+
+- remove Firebase InApp Messaging
+- optional delay before Firebase Remote Config, set delay_for_remote_config with the number of seconds to enable it
+- cache all purchase for tracking in case of fail, or no initialized AppsFlyer
+
+HCSDK 1.25.1
+
+-  update AppsFlyer, Unity - 6.2.62, iOS - 6.2.6, GP - 6.2.3 
+
+HCSDK 1.25.0
+
+- add Invariant Culture to Conversion Reporter
+- additional null checks in GameCenter methods
+- update IS iOS to 7.1.5, GP to 7.1.5.1
+- update MoPub, iOS 5.16.2, Android 5.16.3
+- update IS iOS Adapters: AC 4.3.8, AdMob 4.3.22, AL 4.3.23, FAN 4.3.24, CB 4.3.6, Fyber 4.3.15, IM 4.3.9, My Target 4.1.6.3, Smaato 4.3.1, UA 4.3.9, VU 4.3.10, Snap 4.3.0, Pangle 4.3.3, Tapjoy 4.1.16
+- update MP iOS Adapters: IS 7.1.5.0.1, AC 4.5.0.2, AdMob 8.4.0.0, AL 10.0.1.0, 6.3.1.0, CB 8.4.1.0, IM 9.1.5.0, Pangle 3.5.1.2.0, Smaato 21.6.11, UA 3.7.1.1, VU 6.9.2.0, TJ 12.8.0.1
+- update IS GP Adapters: AdMob 4.3.18, AL 4.3.24, FAN 4.3.25, Fyber 4.3.13, IM 4.3.9, MyTarget 4.1.6, Smaato 4.3.1, UA 4.3.10, VU 4.3.8, Pangle 4.3.1, TapJoy 4.1.16
+- update MP GP Adapters: IS 7.1.5.0, AdMob 19.8.0.0, AL 10.1.2.0, FAN 6.3.0.0, IM 9.1.6.0, Pangle 3.4.1.1.1, VU 6.9.1.0, Tapjoy 12.8.0.0
+- update GP Firebase to 26.4.0 
+
+HCSDK 1.24.10
+
+- fix purchase tracking, problem only in 1.24.9
+- fix tracking subscription
+
+HCSDK 1.24.9
+
+- ConversionReported for MidCore Games, add to local configuration HC_MidCore set to TRUE to activate (should not be used for most of Hyper Casual Games)
+- fix for a small delay with rewarded availability at the start
+- Subscription Reporter
+
+HCSDK 1.24.8
+
+- fix parsing version on Editor
+
+HCSDK 1.24.7
+
+- fix compilling on Android
+
+HCSDK 1.24.6
+
+- IS and AppsFlyer will wait for ATT popup on iOS 14.5 and highest, can be configured by using key wait_for_att_popup (FALSE to disable)
+- update AppLovin 6.15.2
+- update AL adapters IS iOS: 4.3.22
+- update AL adapters MoPub iOS: 6.15.2.1
+- invoke updateConversionValue 0 after RegisterAppForAdNetworkAttribution
+
+HCSDK 1.24.5
+
+- update AF to 6.2.4
+- update IS FAN to 4.3.23 (6.3.0)
+- update MoPub FAN to 6.3.0.0
+
+HCSDK 1.24.4 
+
+- CP Rewarded Video - key for configure this XpigRewardedInterval
+- remove functionality for showing interstital when video fail
+
+HCSDK 1.24.3
+
+- downgrade Android Audience Network
+
+HCSDK 1.24.2
+
+- new configuration key: HC_WAIT_FOR_ATT if set to TRUE will delay AppsFlyer for ATT user autorization 
+- update AppsFlyer to 6.2.0 (iOS 6.2.0, GP 6.1.4)
+
+HCSDK 1.24.1
+
+- fix ambiguous reference with ProductType
+
+HCSDK 1.24.0
+
+- GP, update AC, adapter MP to 4.4.1.0, IS to 4.3.7
+- GP, update FAN, adapter MP to 6.2.1.0, IS to 4.3.24
+- GP, update IS SDK to 7.1.0.2, adapter MP to 7.1.0.2.0
+- change cp interstitials reacting to config parameter XpigInterstitialInterval, with value -1 disable, with 0 work only when no fill 
+- iOS, update Fyber, adapter IS to 4.3.12
+- fix automatically upload dsym 
+
+HCSDK 1.23.0
+
+- update Facebook SDK to version 9.0
+- adding SKAdNetwork methods UpdateConversionValue and HCRegisterAppForAdNetworkAttribution
+- update AppsFlyer to 6.1.3
+- update IS AC on iOS to 4.3.6, on GP 4.3.5
+- iOS, update MP AC to 4.4.1.1.3
+- GP, update MP AC to 4.4.0.0
+- iOS, add IS  Smatoo 4.3.0
+- GP, add IS  Smatoo 4.3.0
+
+HCSDK 1.22.2
+
+- update CoreAssemblyDefinition for compatibility to latest beta of Core Modules (released in 27.01.2021)
+
+HCSDK 1.22.1
+
+- iOS, fix problem with FB Login when user is logged in only in FB app
+
+HCSDK 1.22.0
+
+- HCSDK can build Xcode on Windows, build will work after moving to MacOS
+- update IronSource on iOS 7.1.0.0, on GP 7.1.0.1
+- update IS iOS Adapters: AC 4.3.5, AdMob 4.3.18, AL 4.3.21, CB 4.3.5, FB 4.3.22, IM 4.3.8, Fyber 4.3.11,  Pangle 4.3.0, Tapjoy 4.1.15, UA 4.3.7, VU 4.3.8
+- update IS GP Adapters: AC 4.3.4, AdMob 4.3.15, AL 4.3.21, CB 4.3.5, FB 4.3.23, IM 4.3.8, Fyber 4.3.10, Pangle 4.3.0, Tapjoy 4.1.15, UA 4.3.9, VU 4.3.7
+- mechanism for checking bundle name in json from firebase before GP building
+- new provider Snap, iOS IS Adapter 4.3.0, MP Adapter 1.0.7.1, 
+- new provider MyTarget, iOS IS Adapter 4.1.5, iOS MP Adapter 5.9.9, GP IS Adapter 4.1.5, GP MP Adapter 
+- update MoPub on iOS and GP to 5.15.0
+- update MP iOS Adapters: AdMob 7.69.0.1, AL 6.14.11.0, FB 6.2.1.0, CB 8.4.0.0, IS 7.0.4.0.0, Pangle 3.3.6.2.0, TJ 12.7.1.2, UA 3.6.0.0, VU 6.8.1.0, IM 9.1.1.0, Fyber 7.7.3 
+- update MP GP Adapters: IS 7.0.4.1.1, AdMob 19.6.0.1, AL 9.14.12.0, CB 8.2.0.3, Fyber 7.7.4, Pangle 3.4.1.1.0, TJ 12.7.1.1, UA 3.6.0.1, Snap 1.0.3.2.1
+- Tenjin removed
+- TrackTenjinPurchase is obsolete now, there is new method for tracking purchase: HCSDK.TrackPurchase 
+
+HCSDK 1.21.2
+
+- Tenjin disabled by default, to turn him on set in local configuration HC_TENJIN_TURN_ON to TRUE
+- fix problem with not ads when analytics consent is not initialized on start
+
+HCSDK 1.21.1
+
+- fix problem that banner is hide after interstitial
+- fix showing crosspromo interstitial
+
+HCSDK 1.21.0
+
+- method HCSDK.SetReviewMode(bool reviewMode) on iOS will show idfa popup, if review mode on
+- method HCSDK.ShowWifiSettings(), will present device settings with wifi
+- update Firebase Core (fix related Crashes)
+- fix banner overlapping
+- cross promo interstitial, set XpigInterstitialInterval for cp interstitial frequesncy, local config or firebase remote config
+- delay initialization remote config (fix related ANRs)
+- reworked firebase cloud messaging
+- fix ChartBoost
+- update Vungle IS adapter to 4.3.7
+- initializationComplete and InitializationStartEvent working in Editor
+- update AppsFlyer, iOS to 6.1.1, GP to 6.1.1
+- update Pangle on GP in MoPub 3.1.7.4.0
+
+HCSDK 1.20.2
+
+- fix AppsFlyer tracking on Huawei
+
+HCSDK 1.20.1
+
+- fix incorrectly double parsing in IronSource SDK
+
+HCSDK 1.20.0
+
+- update Firebase, iOS to 7.1.0
+- fixes in parsing double for impression tracking
+
+HCSDK 1.19.4
+
+- update Firebase Remote Config (fix related ANRs)
+- fix sending duplicates of AdImporession to our server and Firebase
+
+HCSDK 1.19.3
+
+- properly clear Huawei rewarded video ad after closing to avoid rewarding despite being cancelled
+
+HCSDK 1.19.2
+
+- update Huawei Ads SDK to 13.4.34.301
+
+HCSDK 1.19.1
+
+- add HCSDK.FbInitComplete event
+
+HCSDK 1.19.0
+
+- remove old Consent management
+- use Core module for Consents
+- add GameCenter and GooglePlayGame Services Login, needed for Data Point
+- fix preventing adding Event System in FB class: CodelessUIInteractEvent 
+- MoPub Adaters for Fyber and InMobi
+- add new ad_revenue_over events to Firebase
+- add option to chagnge MoPub log level in Firebase Remote Config (key MP_LOG_LEVEL, value Info or Debug), by default no logs in MoPub
+
+- additional configuration for MoPub bidding (can be pass in Firebase Remote Config if initialize_after_remote_config set to TRUE):
+    AC: "AdColony_appId", "adColony_allZoneIds"; Fyber: "Fyber_AppId"; CB: "ChartBoost_id", "ChartBoost_signature"; 
+    Pangle: "Pangle_id"; Tapjoy: "Tapjoy_sdk_key", Vungle: "Vungle_id"   
+
+- update Vungle SDK Android to 6.8.1, MP Adapter 6.8.1.0, IS Adapter 4.3.6
+- update ChartBoost MP Adapter on GP to 8.1.0.2
+- update Facebook Audience Network SDK Android to 6.2.0, MP Adapter 6.2.0.0, IS Adapter 4.3.23
+- update UnityAds MP Adapter on GP to 3.5.0.0
+- update AppLovin SDK Android to 9.14.6, MP Adapter 9.14.6.0, IS Adapter 4.3.20
+- update Pangle SDK Android to 3.1.7.4, IS Adapter 4.1.5
+
+- update Facebook Audience Network SDK iOS to 6.2.0, MP Adapter 6.2.0.0, IS Adapter 4.3.21
+- update Vungle SDK iOS to 6.8.1, MP Adapter 6.8.1.0, IS Adapter 4.3.8
+
+HCSDK 1.18.2
+
+- ad events with revenue "ad_revenue_over_X" sent to Firebase
+
+HCSDK 1.18.1
+
+- implement new helper AndroidUtils.GetCurrentStorefront() returning which store the current app was published to. Currently supports Google Play Store and Huawei AppGallery.
+- Huawei AppGallery builds will now use Huawei Ads on all devices (Huawei requirement)
+- add missing Huawei dependencies for AppsFlyer tracking
+
+
+HCSDK 1.18.0
+
+- send ad_impression to Firebase with data about impression, IronSource and MoPub
+- update IronSource on iOS 7.0.3, on GP 7.0.3.1
+- update IS iOS Adapters: AC 4.3.4, AdMob 4.3.17, AL 4.3.19, CB 4.3.4, FB 4.3.20, IM 4.3.8, Fyber 4.3.10,  Pangle 4.1.8, Tapjoy 4.1.14, UA 4.3.4, VU 4.3.7
+- update MoPub iOS Adapters: IS 7.0.2.0, Pangle 3.2.6.2.2
+- update IS GP Adapters: AC 4.3.4, AdMob 4.3.14, AL 4.3.19, CB 4.3.4, FB 4.3.22, IM 4.3.8, Fyber 4.3.8, TJ 4.1.14, UA 4.3.7, VU 4.3.5
+- update MP GP Adapters: CB 8.1.0.1, 
+- add Chartboost
+- posibility to switch between Ads Mediation byt using key ads_mediation (IS for IronSource, MP for MoPub), IS will be use by default
+- possibility to switching IS and MoPub remotely, needed key ads_mediation in Firebase Remote Config and initialize_after_remote_config set to TRUE in local configuration
+- keys required for MoPub "MoPub_rewarded", "MoPub_banner", "MoPub_interstitial", if not planning to use MoPub, then set "1234"
+- sending all impression data to our server for IronSource (MoPub have this feature in 1.14.0)
+- update Firebase, iOS to 6.34.0, on GP to latest (on GP there is no global version)
+
+HCSDK 1.17.0
+
+- add .asmdef to HCSDK
+- use Firebase Crashlytics Android lib instead of old Fabric one
+- MoPub Unity Plugin 5.14.1 and integration in C#
+- update MoPub SDK iOS 5.14.1 and GP 5.14.0
+- update MoPub iOS Adapters: AC 4.4.0, AdMob 7.66.0, AL 6.14.4, FB 6.0.0, IS 7.0.1, Pangle 3.2.6.2, TJ 12.7.0, UA 3.4.8, VU 6.8.0
+- update MoPub GP Adapters: AC 4.2.4, AdMob 19.4.0, AL 9.14.4, FB 6.1.0, IS 7.0.2, Pangle 3.1.5.4, TJ 12.7.0, UA 3.4.8, VU 6.8.0 
+- correct set CCPA consent for MoPub
+
+HCSDK 1.16.2
+
+- changing the order of sending Consent to IAdsProvider
+- Pangle on GP adapter version 4.1.2
+
+HCSDK 1.16.1
+
+- fix postproces on iOS
+
+HCSDK 1.16.0
+
+- support building for XCode, iOS on Windows
+- add Huawei Ads
+- support for non-Google Huawei devices with blocked Google-related calls and Huawei Ads instead of IronSource
+- updated Firebase and Google Android libs to latest versions
+- remove AppsFlyerClickTarget.cs
+- remove method HCSDK.AttributeAndOpenStore();
+- AppsFlyer set Custom User Id from Firebase
+- update AdMob iOS Adapter to 4.3.16
+- Firebase for Android now requires Google/Firebase config file downloaded from the console, similar to iOS
+- Place the downloaded google-services.json file in Assets/HCSDK/Configuration/Firebase/Android
+- Due to the above, following Android configuration keys are no longer needed and will be ignored:
+- FirebaseId, GoogleApiKey, GPGS_key
+
+HCSDK 1.15.1
+
+- remove SKAdNetwork Postprocess Identifiers from HCSDK, now will be handled by Decoreator: BoomBit SDK SKAdNetwork Support 
+- Set CCPA for Facebook
+- Set Consents for mediation before initialization of IS
+- fix Fyber for Unity 2019.4.x
+
+
+HCSDK 1.15.0
+ 
+- new cross promo based on Core modules
+- old XPIG removed, now is supported by Core module (http://core.boombit.com/docs/_tutorial_switching_fom_xpig_to_cross_promotion.html)
+- using Android Build Tools module
+- support for building on Windows
+- option to add ironsource segment custom property in Remote Config (need to set ironsource_segment_custom_property_name and ironsource_segment_custom_property_value
+    in Firebase Remote Config Console and required key initialize_after_remote_config on TRUE in configuration )
+- update IS Unity plugin to 7.0.1.1
+- update IS iOS to 7.0.1, GP to 7.0.1.1 
+- update iOS adapters: AC-4.3.3, AdMob-4.3.15, AL-4.3.16, FB-4.3.18, Fyber-4.3.7, Pangle-4.1.5, TJ-4.1.13, UA-4.3.4, VU-4.3.5
+- update GP adapters: AC-4.3.2, AdMob-4.3.13, AL-4.3.16, FB-4.3.19, Fyber-4.3.7, InMobi-4.3.6, Pangle-4.1.2, TJ-4.1.13, UA-4.3.6, VU-4.3.3
+- remove Mintegral SDK 
+- fix for no ads if wifi off on app start on GP
+- add SKAdNetworkIdentifiers to plist on iOS
+- iOS Review popup, (IOSReviewContoroller.RequestReview();)
+- fix for iOS 11 crash when Unity 2019.4.x
+
+HCSDK 1.13.3
+
+- fix TikTokProvider on iOS
+
+HCSDK 1.13.1
+
+- fix AppsFlyer validateAndSendInAppPurchase
+- fix FirebaseRemoteConfig.FirebaseRemoteConfigInitializedSuccessfulEvent on iOS 
+
+HCSDK 1.13.0
+
+- remove many memory leaks
+- update Facebook SDK to 7.21.1
+- stop enforcing debuggable builds on Android
+- add Crashlytics methods for tracking exceptions and loging crash events
+- fix Facebook initialization on iOS also add link.xml to Facebook
+- iOS Configuration requires now key AppLovin_id with AppLovin id
+
+HCSDK 1.12.3
+
+- change behaviour of HCSDK_SHOW_INTERSTITIAL_WHEN_VIDEO_FAIL, when interstitial will be ready IsRewardedReady will return true 
+
+HCSDK 1.12.2
+
+- Xpig links to store outside appsflayer analytics fixed
+
+HCSDK 1.12.1
+
+- add to segmentation info about LAT and about rewarded cancel percentage
+- option to show interstitial when video fail (need to set HCSDK_SHOW_INTERSTITIAL_WHEN_VIDEO_FAIL to TRUE in RemoteConfig)  
+- AppsFlyer update iOS and Android 5.4.1
+- update IronSource 6.17.1 iOS with adapters: AdColony 4.3.2, Admob 4.3.12, AppLovin 4.3.13, FAN 4.3.16, Fyber 4.3.5, InMobi 4.3.7, Mintegral 4.3.3, Tapjoy 4.1.11, UnityAds 4.3.3
+- fix MiniJSON in TenjinProvider
+- CCPA Compliance (Cosent will be showed in US)
+- add ShowXpigVideoAd without size
+- fix MiniJson in AppsFlyer and Tenjin
+- disable Fyber on 2019LTS
+
+HCSDK 1.12.0
+
+- update FB iOS 7.11
+- update Firebase iOS
+- support for Unity 2019 LTS
+
+HCSDK 1.11.6
+
+- iOS fix for banner block app when no Internet and slow connection
+
+
+HCSDK 1.11.5
+
+- fix BannerDisplayEvent
+- Xpig banner position on iOS devices without home button fixed
+- fix problem when banner hide while touch begin
+
+HCSDK 1.11.4
+
+- add chmod to Fabric runscript
+- add missing path for swift
+- add InMobi on iOS without UIWebView
+
+HCSDK 1.11.3
+
+- fix compilation error in Editor when purchases on
+
+HCSDK 1.11.2
+
+- fix problem with auto-updating whitelist
+- fix crash on restore purchase
+
+HCSDK 1.11.1
+
+- update Appsflyer 5.3.0
+- new keys for AppsFlyer: AppsFlyer_appId and AppsFlyer_devKey
+- new key on Android: Google_PublicKey, for iap verifocation in AppsFlyer
+- for testing purchases on Android connect device and invoke in console 'adb shell setprop debug.purchase.hcsdk enabled', to disable test mode, change enabled to disabled 
+- fix android dependencies
+- update Facebook iOS SDK to 7.0
+- fix problem with consent on android
+- update IronSource Android to 6.17.0
+- update IS Android Adapters: AdMob 4.3.10, AL 4.3.13, FB 4.3.16, AC 4.3.1, Fyber 4.3.5, IM 4.3.4, Mintegral 4.3.3, UnityAds 4.3.5, Tapjoy 4.1.11, Vungle 4.3.1
+- fix problem with development build on Android
+- fix problem with ambiguous reference between 'BoomBit.HyperCasual.Utils.Log' and 'Coredian.Log' on iOS 
+- additional nullcheck in Firebase Remote Config
+- mechanism for checking keys befiore building
+
+HCSDK 1.10.1
+
+- add InMobi Adapter on iOS 4.3.5
+
+HCSDK 1.10.0
+
+- fix android dependencies
+
+
+HCSDK 1.9.0
+
+- add Xpig Banners GIF support
+- fix sending cross promo to segment
+- reorganize android plugins
+
+HCSDK.1.8.1
+
+- fix problem with Android Firebase InApp Messaging
+
+HCSDK 1.8.0
+
+- delay HCSDK before get deeplink conversion Tenjin when in configuration is key wait_for_deeplink set to TRUE
+- key deepling_wait_time, for choosing how long app will wait for deeplink, by default 6 seconds,  
+- add to segment info if FB is installed
+- for manual push registration use method HCSDK.RegisterNotification() , key "push_manual" set to TRUE
+- track time needed for getting ad source
+- update iOS IronSource to version 6.16.1 ( AdColony adapter to 4.3.0 sdk 4.1.4, AdMob adapter to 4.3.10 sdk 7.57.0,
+    AppLovin adapter to 4.3.11 sdk 6.12.5, Facebook adapter to 4.3.14 sdk 5.9.0, Fyber adapter to 4.3.4 sdk 7.5.4,
+    Mintegral adapter to 4.3.1 sdk 6.1.3, Tapjoy adapter to 4.1.10 sdk 12.4.2,
+    UnityAds adapter to 4.3.1 sdk 3.4.2, Vungle adapter to 4.3.0 sdk 6.5.3 )
+
+HCSDK 1.7.2
+
+- fix crash on Android 5 and 6
+
+HCSDK 1.7.1
+
+- banners in editor fixed
+
+HCSDK 1.7.0
+
+- update Android IronSource to version 6.16.1 ( AdColony adapter to 4.3.0 sdk 4.1.4, AdMob adapter to 4.3.8 sdk 19.0.1,
+    AppLovin adapter to 4.3.9 sdk 9.11.6, Facebook adapter to 4.3.13 sdk 5.8.0, Fyber adapter to 4.3.3 sdk 7.5.3,
+    InMobi adapter to 4.3.3 sdk 9.0.4, Mintegral adapter to 4.3.1 sdk 13.0.41, Tapjoy adapter to 4.1.10 sdk 12.4.2,
+    UnityAds adapter to 4.3.2 sdk 3.4.2, Vungle adapter to 4.3.0 sdk 6.5.3 )
+- added Android Firebase InApp Messaging required Google API Key (key `GoogleApiKey` entry in configuration)
+- iOS InApp Messaging
+- improve parsing RemoteConfig to json
+- track ad fill and ad fail, if app don't show video when not available then invoke method TrackNoRewardedVideo
+- track no_tablet event
+- CrossPromo Banner, XpigBannerInterval in Remote Config for seting cross promo banner interval
+
+HCSDK 1.6.6
+
+- fix problem when ads not starting, when no internet on first launch
+
+HCSDK 1.6.5
+
+- option to set tos url and privacy url in local configs, keys: Consent_privacyURL, Consent_tosURL
+- add default linkt to tos and pricacy urls
+
+HCSDK 1.6.4
+
+- ConsentShowEvent and ConsentCloseEvent
+- SetProperty method for Firebase Analtyics
+- send probperty about from Tejnij to Firebase
+
+HCSDK 1.6.3
+
+- Offline consent fixed
+
+HCSDK 1.6.2
+
+- Allow for Android notification icon customization. 
+  To do so, replace Assets in `Assets/Plugins/Android/FirebaseMessaging_lib` 
+  and remember to restore them after each plugin refresh, 
+  as they will be overwritten due to technical limitations.
+- Android Firebase Messaging Service will now send MessageReceived event if app was launched/resumed from notification
+  
+HCSDK 1.6.1
+
+- multiple productViewControllers removed
+
+HCSDK 1.6.0
+
+- fix deprecated UIWebView
+
+HCSDK 1.5.1
+
+- event HCSDK.InitializationStartEvent for checking when initialization start
+- opotion for delay initialization of ad networks until Firebase Remote config is ready, (key initialize_after_remote_config in configuration) 
+
+HCSDK 1.5.0
+
+- Firebase Bloud Messaging (PUSH NOTIFICATIONS)
+- Tracking iap in Tenjin 
+- fixed native IOS config parser
+- update iOS IS Adapter: AdColony 4.3.0, AdMob 4.3.10,  
+- fix problem with invoking start caching interstitial many times
+- update iOS IS Adapter: AdColony 4.3.0, AdMob 4.3.10,
+- update iOS Facebook SDK to 6.3.0
+- update Android Facebook SDK to 6.3.0
+- update iOS IS Adapter: Fyber 4.3.4,  
+
+HCSDK 1.4.5
+
+- add option for manual start caching interstitials
+- send additional parameters to IronSource segments
+
+HCSDK 1.4.4
+
+- fix WRITE_EXTERNAL_STORAGE permission
+
+HCSDK 1.4.3
+
+- fix Firebase retention/tracking problems
+
+HCSDK 1.4.2
+
+-XPig null instance fixed
+- Firebase Sender ID is now extracted from FirebaseId if using full format (1:XXX:android:YYY)
+- fix for Facebook iOS and Android
+
+HCSDK 1.4.1
+
+-XPig ready event fixes
+
+HCSDK 1.4.0
+
+- update IronSource Android, iOS and Unity SDK to 6.15.0.1
+- update Android IS Adapter: Unity Ads 4.3.0, Fyber 4.3.2, Mintegral 4.3.0
+- update iOS IS Adapter: FB 4.3.12, Mintegral 4.3.0, Fyuber 4.3.3, UnityAds 4.3.0
+- add InMobi on Android adapter 4.3.2, and iOS adapter 4.3.3
+
+HCSDK 1.3.3
+
+- fix for consent outside EU
+
+HCSDK 1.3.2
+
+- fix for building aab
+
+HCSDK 1.3.1
+
+- fix iOS plugins meta
+
+HCSDK 1.3
+
+- add Firebase Remote Config Fetch on back from background
+- sending numeric parameters to FirebaseAnalytics
+- update IS iOS SDK to 6.14.0
+- update adapters iOS IS: AdColony 4.1.8, AdMob 4.3.9, AppLovin 4.3.9, FAN 4.3.11, Mintegral 4.1.4, Tapjoy 4.1.9, Vungle 4.1.9
+- updated Ironsource android sdk to 6.14.0.1
+- update android IS adapters: adColony adapter 4.1.10, adMob adapter 4.3.7, aplovin adapter 4.3.8, facebook adapter 4.3.11, fyber adapter 4.3.1, tapjoy adapter 4.1.9, unity ads adapter 4.1.7, vungle adapter 4.1.6
+
+HCSDK 1.2.2
+
+- add NSBluetoothPeripheralUsageDescription on iOS
+- add NSCalendarsUsageDescription on iOS
+
+HCSDK 1.2.1
+
+- fix Firebase on iOS
+- add FirebaseRemoteConfig.FirebaseConfigReady
+
+HCSDK 1.2.0
+
+- Firebase Remote Config
+- speed up first interstitial cache
+- ad parameters to Firebase event sending by HCSDK
+- improve banner, after fail, sdk will try cache again
+- Firebase Analytics now waits for GDPR consent
+- Firebase Analytics now accepts different datatypes for events
+
+HCSDK 1.1.0
+
+- GDPR native version
+- Facebook
+- Tenjin
+- Firebase Crashlytics
+- Firebase Analytics
+- IronSource with ads mediation

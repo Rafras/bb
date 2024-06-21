@@ -1,0 +1,33 @@
+{
+	"name": "HCSDK",
+	"autoReferenced": true,
+	"references": [
+		"Core",
+		"ModulesFacade",
+		"CoreUnity",
+		"Coredian.FacebookInterface",
+		"Coredian.Facebook",
+		"Core.ConsentInterface",
+		"Coredian.Firebase.Interface",
+		"Core.CrossPromotion",
+		"Coredian.InAppPurchasesInterface",
+		"JsonSerializer",
+		"AppsFlyer",
+		"Coredian.AdvertisingId"
+	],
+	"includePlatforms": [
+		
+	],
+	"excludePlatforms": [
+		
+	],
+	"optionalUnityReferences": [
+		
+	],
+	"precompiledReferences": [
+		
+	],
+	"defineConstraints": [
+		
+	]
+}

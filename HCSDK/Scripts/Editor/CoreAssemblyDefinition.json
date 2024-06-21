@@ -1,0 +1,51 @@
+{
+	"moduleId": "HCSDK-Editor",
+	"familyName": null,
+	"type": 2,
+	"requirements": [
+		{
+			"identifier": "core_main",
+			"type": 0
+		},
+		{
+			"identifier": "core_modules_facade",
+			"type": 0
+		},
+		{
+			"identifier": "core_unity",
+			"type": 0
+		},
+		{
+			"identifier": "logger",
+			"type": 0
+		},
+		{
+			"identifier": "core_android_build_tools",
+			"type": 1
+		},
+		{
+			"identifier": "apple_build_tools",
+			"type": 1
+		},
+		{
+			"identifier": "stores_variants",
+			"type": 1
+		},
+		{
+			"identifier": "stores_variants",
+			"type": 0
+		},
+		{
+			"identifier": "HCSDK",
+			"type": 2
+		},
+		{
+			"identifier": "core_json_serializer",
+			"type": 0
+		}
+	],
+	"platforms": [
+		"Editor"
+	],
+	"fileVersion": 0
+}

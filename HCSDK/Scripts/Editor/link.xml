@@ -1,0 +1,3 @@
+﻿<linker>
+	<assembly fullname="HCSDK-Editor" preserve="all" />
+</linker>

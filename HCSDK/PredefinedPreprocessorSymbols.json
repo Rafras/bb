@@ -1,0 +1,10 @@
+{
+  "symbols": [
+    {
+      "symbol": "USE_UNITY_PURCHASING",
+      "enabledByDefault": false,
+      "allowStatusChange": true,
+      "platforms": []
+    }
+  ]
+}

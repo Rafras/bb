@@ -1,0 +1,44 @@
+﻿# CoreInstaller {$PROJECT_PATH}/Assets/Core/.gitignore file
+# Version 4
+
+# Ignore everything in this directory
+/*
+
+# Except this file
+!.gitignore
+
+#And pushed core dirs
+!/Data/
+!/Data.meta
+!/Settings/
+!/Settings.meta
+
+# Ignored:
+#  Resources/
+#  Resources/Core/Local/
+#  Resources/Core/config.json   (back compatible)
+#  Resources/Core/platform.txt  (back compatible)
+
+# Not-ignored
+#  Resources/Core/
+
+# Core Resources folder
+# Cancel ignore all for Resources
+!/Resources
+# But ignore everything inside
+/Resources/* 
+# Don't ignore Resources/Core
+!/Resources/Core
+# But ignore Resources/Core/Local
+/Resources/Core/Local/*
+/Resources/Core/Local.meta
+# Backwards compatibility files
+/Resources/Core/config.json
+/Resources/Core/config.json.meta
+/Resources/Core/BuildDefines.meta
+/Resources/Core/BuildDefines/platformInfo.txt
+/Resources/Core/BuildDefines/platformInfo.txt.meta
+
+#Wizard folder
+!/Wizard/
+!/Wizard.meta

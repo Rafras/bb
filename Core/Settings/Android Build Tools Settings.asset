@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218e96ed2e3d4d5aa69f7f981d0a3c5b, type: 3}
+  m_Name: Android Build Tools Settings
+  m_EditorClassIdentifier: 
+  androidDirectoryPath: Plugins/Android
+  multidexPluginVersion: 1.0.3
+  allowBackup: 0
+  developmentDebuggable: 1
+  releaseDebuggable: 0
+  useLocalMavenRepo: 0
+  removeReadExternalStoragePermission: 0
+  removeWriteExternalStoragePermission: 0
+  customGradleProperties:
+  - key: android.useAndroidX
+    value: true
+  - key: android.enableJetifier
+    value: true
+  enableMultiDex: 1
+  mainActivityUpdated: 0
+  mainActivitySplitUpdated: 0
+  mainActivity: Coredian.BuildTools.Android.Editor.Configuration.BoomBitMainActivity
+  fileVersion: 1

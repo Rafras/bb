@@ -1,0 +1,134 @@
+{
+	"enabled": false,
+	"configNodeTypeName": "Coredian.FilteredLoggerConfigurator.LoggerConfiguratorConfigNode, LoggerConfigurator",
+	"version": 0,
+	"configNodeData": {
+		"releaseBuildFilterSettings": {
+			"outputType": "Coredian.FilteredLogger.Output.UnityOutput",
+			"typeFilter": 6,
+			"autogenerateCategories": true
+		},
+		"devBuildFilterSettings": {
+			"outputType": "Coredian.FilteredLogger.Output.UnityOutput",
+			"typeFilter": 2147483647,
+			"autogenerateCategories": true
+		},
+		"editorFilterSettings": {
+			"outputType": "Coredian.FilteredLogger.Output.UnityOutput",
+			"typeFilter": 2147483647,
+			"autogenerateCategories": true
+		},
+		"predefinedCategories": {
+			"disableNameChanges": true,
+			"disableCategoriesChanges": true,
+			"name": "Predefined Categories",
+			"categories": [
+				{
+					"category": "Core",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.Assets",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.BoomBitIdsImporter",
+					"logTypeFilter": 7,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.Build",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.BuildTools.Android.Editor",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.BuildTools.Apple.Editor",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.CrossPromo",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.CrossPromo.WaterfallSource",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.Data",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.Data.Serialization",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.Diagnostics",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.Facebook",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.Firebase",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Coredian.StoreVariants",
+					"logTypeFilter": 5,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				},
+				{
+					"category": "Facebook",
+					"logTypeFilter": 6,
+					"minimumPriority": 0,
+					"readOnlyCategory": true
+				}
+			]
+		},
+		"customCategories": [
+			
+		],
+		"groupedCategories": [
+			
+		]
+	},
+	"configNodeVariantData": {
+		
+	}
+}

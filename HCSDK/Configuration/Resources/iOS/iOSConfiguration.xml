@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plist version="1.0">
+  <dict>
+    <key>appId</key>
+    <string>1234</string>
+    <key>Facebook_appId</key>
+    <string>1234</string>
+    <key>Facebook_displayName</key>
+    <string>PMTest</string>
+    <key>unique_app_name</key>
+    <string>PMTest</string>
+    <key>AdMob_app_id</key>
+    <string>ca-app-pub-1234567891234567~1234567890</string>
+    <key>IronSource_id</key>
+    <string>1234</string>
+    <key>manual_interstitial_caching</key>
+    <string>FALSE</string>
+    <key>push_manual</key>
+    <string>FALSE</string>
+    <key>AppsFlyer_appId</key>
+    <string>1234</string>
+    <key>AppsFlyer_devKey</key>
+    <string>1234</string>
+    <key>AppLovin_id</key>
+    <string>1234</string>
+  </dict>
+</plist>

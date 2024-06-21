@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bddf2bde311e354f9f5f93e02898291, type: 3}
+  m_Name: Cross-Promotion Config Node
+  m_EditorClassIdentifier: 
+  useThisConfig: 1
+  isUpToDateWithConfig: 1
+  googleSheetsCache:
+    url: 
+    sheetsNames: []
+    sheetsGuids: []
+    preferredSheet: 
+  waterfallsSource: Coredian.CrossPromo.WaterfallSource.CrossPromoWaterfallSource
+  embeddedSquareConfiguration:
+    defaultPlacementIdentifier: default
+    adsDownloadedInAdvance: 2
+    behaviourOnClick: 1
+    nextVideoDelay: 0.5
+  bannerConfiguration:
+    defaultPlacementIdentifier: default
+    adsDownloadedInAdvance: 1
+  interstitialConfiguration:
+    defaultPlacementIdentifier: default
+    adsDownloadedInAdvance: 1
+  rewardedConfiguration:
+    defaultPlacementIdentifier: default
+    adsDownloadedInAdvance: 1
+  moreGamesConfiguration:
+    defaultPlacementIdentifier: default
+    adsDownloadedInAdvance: 1
+  interactiveIconsConfiguration:
+    defaultPlacementIdentifier: default
+    adsDownloadedInAdvance: 1
+  iosSchemaTranslationUrl: http://cdnicons.pluginmanagerconfig1.info/Schemes/com.hc.translation.csv
+  maximumConcurrentDownloads: 3
+  editorEventBehaviour: 0
